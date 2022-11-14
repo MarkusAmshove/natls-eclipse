@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Natls-eclipse
+Bundle-SymbolicName: natls-eclipse;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: natls_eclipse.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.lsp4e
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: natls.eclipse
+Bundle-ActivationPolicy: lazy

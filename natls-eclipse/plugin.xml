@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.text"
+            file-extensions="NSN,NSL,NSA,NSP,NSN,NS7"
+            id="org.amshove.natls.eclipse"
+            name="Natural Language Server"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editorContentTypeBinding
+            contentTypeId="org.amshove.natls.eclipse"
+            editorId="org.eclipse.ui.genericeditor.GenericEditor">
+      </editorContentTypeBinding>
+ <!--     <editorContentTypeBinding
+            contentTypeId="org.amshove.natls.eclipse"
+            editorId="com.softwareag.naturalone.natural.sourceeditor.editor.internal.NaturalSourceEditor">
+      </editorContentTypeBinding>-->
+   </extension>
+   <extension
+         point="org.eclipse.lsp4e.languageServer">
+      <server
+            class="org.amshove.natls.eclipse.streamconnectionprovider.NatlsConnectionProvider"
+            id="org.amshove.natls.eclipse"
+            label="Natural Language Server">
+      </server>
+      <contentTypeMapping
+            contentType="org.amshove.natls.eclipse"
+            id="org.amshove.natls.eclipse">
+      </contentTypeMapping>
+   </extension>
+
+</plugin>
